@@ -1,0 +1,13 @@
+{application, bd,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  riak_core
+                 ]},
+  {mod, { bd_app, []}},
+  {env, []}
+ ]}.

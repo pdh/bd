@@ -1,0 +1,9 @@
+*.beam
+.eunit
+deps/*
+apps/bd/ebin
+*~
+dev/*
+doc/*
+rel/
+
