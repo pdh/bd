@@ -6,4 +6,5 @@ apps/bd/ebin
 dev/*
 doc/*
 rel/
+*.swp
 
