@@ -12,7 +12,7 @@
 start(_StartType, _StartArgs) ->
     case bd_sup:start_link() of
         {ok, Pid} ->
-            ok = riak_core:register(bd_vnode),
+            ok = riak_core:register_mod(riak_core:get_app(undefined, bd_vnode), bd_vnode, riak_core:vnode_modules),
             ok = riak_core_ring_events:add_guarded_handler(bd_ring_event_handler, []),
             ok = riak_core_node_watcher_events:add_guarded_handler(bd_node_event_handler, []),
             ok = riak_core_node_watcher:service_up(bd, self()),
